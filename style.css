@@ -1,268 +1,339 @@
 /* --- CSS Variables for easy theme management --- */
 :root {
-    --bg-color: #1c1c1e; /* Dark grey background */
-    --card-bg: #2c2c2e; /* Slightly lighter surface color */
-    --text-color: #f5f5f7; /* Off-white for primary text */
-    --subtle-text: #8d8d92; /* Muted grey for secondary text */
-    --accent-color: #0a84ff; /* Brighter blue for better contrast */
-    --accent-hover: #409cff;
-    --favorite-color: #ffd60a; /* Brighter yellow */
-    --shadow-color: rgba(0, 0, 0, 0.3); /* Darker shadow for depth */
-    --border-color: #424245; /* Subtle border color */
-    --tag-bg: #424245;
-    --tag-text: #f5f5f7;
-    --font-family: 'Work Sans', sans-serif;
+  --bg-color: #1c1c1e; /* Dark grey background */
+  --card-bg: #2c2c2e; /* Slightly lighter surface color */
+  --text-color: #f5f5f7; /* Off-white for primary text */
+  --subtle-text: #8d8d92; /* Muted grey for secondary text */
+  --accent-color: #0a84ff; /* Brighter blue for better contrast */
+  --accent-hover: #409cff;
+  --favorite-color: #ffd60a; /* Brighter yellow */
+  --shadow-color: rgba(0, 0, 0, 0.3); /* Darker shadow for depth */
+  --border-color: #424245; /* Subtle border color */
+  --tag-bg: #424245;
+  --tag-text: #f5f5f7;
+  --font-family: "Work Sans", sans-serif;
 }
 
 /* --- General & Reset --- */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* Reserve space for the scrollbar to prevent layout shifts */
+  scrollbar-gutter: stable;
+  /* Hide scrollbar while maintaining scrollability */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 body {
-    font-family: var(--font-family);
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    /* Initial animation for page load */
-    animation: page-load-fade-in 0.5s ease-out;
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  /* Initial animation for page load */
+  animation: page-load-fade-in 0.5s ease-out;
 }
 
 /* --- Keyframe Animations --- */
 @keyframes page-load-fade-in {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes card-fade-in {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes star-bounce {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.4); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
 }
 
 /* --- Header --- */
 .header-container {
-    text-align: center;
-    padding: 3rem 1rem;
-    background: linear-gradient(135deg, #2c2c2e 0%, #1c1c1e 100%);
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #2c2c2e 0%, #1c1c1e 100%);
 }
 
 .header-container h1 {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
 .pro-text {
-    color: var(--favorite-color);
+  color: var(--favorite-color);
 }
 
 .header-container p {
-    font-size: 1.1rem;
-    color: var(--subtle-text);
-    max-width: 500px;
-    margin: 0 auto;
+  font-size: 1.1rem;
+  color: var(--subtle-text);
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 /* --- Main Content & Controls --- */
 .main-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
 .controls-container {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
-#search-bar, #favorites-toggle {
-    padding: 0.75rem 1rem;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    font-size: 1rem;
-    font-family: inherit;
-    transition: all 0.2s ease-in-out;
+#search-bar,
+#favorites-toggle {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.2s ease-in-out;
 }
 
 #search-bar {
-    flex-grow: 1;
-    background-color: var(--bg-color); /* Darker background for input */
-    color: var(--text-color); /* Explicitly set text color for good contrast */
-    border-radius: 100px; /* Pill shape */
+  flex-grow: 1;
+  background-color: var(--bg-color); /* Darker background for input */
+  color: var(--text-color); /* Explicitly set text color for good contrast */
+  border-radius: 100px; /* Pill shape */
 }
 
 #search-bar:focus {
-    outline: none;
+  outline: none;
 }
 
 /* Style the placeholder text for better visibility */
 #search-bar::placeholder {
-    color: var(--subtle-text);
+  color: var(--subtle-text);
 }
 
 #favorites-toggle {
-    background-color: var(--card-bg);
-    color: var(--subtle-text);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  /* Glassmorphism Effect */
+  background-color: rgba(44, 44, 46, 0.6); /* --card-bg with transparency */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px; /* Pill shape */
+
+  color: var(--subtle-text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.2s ease-in-out;
 }
 
 #favorites-toggle:hover {
-    border-color: var(--accent-color);
-    color: var(--accent-hover);
+  /* Use the golden favorite color for hover */
+  background-color: rgba(
+    255,
+    214,
+    10,
+    0.15
+  ); /* --favorite-color with transparency */
+  border-color: rgba(255, 214, 10, 0.4);
+  color: var(--favorite-color);
 }
 
 #favorites-toggle.active {
-    background-color: var(--accent-color);
-    color: #fff;
-    border-color: var(--accent-color);
+  /* Use the golden favorite color for the active state */
+  background-color: var(--favorite-color);
+  color: var(--bg-color); /* Use dark text for better contrast on yellow */
+  border-color: var(--favorite-color);
 }
 
 /* --- Tools Grid --- */
 .tools-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
 
 /* --- Tool Card --- */
 .tool-card {
-    background-color: var(--card-bg);
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: inherit;
-    box-shadow: 0 4px 6px var(--shadow-color);
-    transition: box-shadow 0.2s ease-out, transform 0.2s ease-out;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid transparent; /* Make border transparent initially */
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  transition: transform 0.2s ease-out;
+  position: relative; /* Required for the pseudo-element positioning */
+  overflow: hidden; /* Keeps the glow effect inside the card's bounds */
+}
+
+/* The glowing background effect that tracks the mouse */
+.tool-card::before {
+  content: "";
+  position: absolute;
+  left: var(--mouse-x, 0);
+  top: var(--mouse-y, 0);
+  width: 300px; /* Size of the glow */
+  height: 300px;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.04),
+    transparent 40%
+  );
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
 }
 
 .tool-card:hover {
-    transform: translateY(-4px); /* Add a subtle lift effect */
-    /* A composite shadow: the dark lift shadow + the new golden glow */
-    box-shadow: 0 8px 20px var(--shadow-color), 0 0 20px rgba(245, 245, 247, 0.1);
+  transform: translateY(-4px);
+  border-color: var(--border-color); /* Show border on hover */
+}
+
+.tool-card:hover::before {
+  opacity: 1; /* Show the glow on hover */
 }
 
 /* Class specifically for the initial page load animation */
 .initial-load-animation {
-    animation: card-fade-in 0.4s ease-out forwards;
-    animation-fill-mode: backwards; /* Start in 'from' state before animation begins */
+  animation: card-fade-in 0.4s ease-out forwards;
+  animation-fill-mode: backwards; /* Start in 'from' state before animation begins */
 }
 
 .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
 }
 
 .card-header h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-right: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-right: 1rem;
 }
 
 .favorite-btn {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: var(--subtle-text);
-    cursor: pointer;
-    padding: 0;
-    transition: color 0.2s ease;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--subtle-text);
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
 }
 
 .favorite-btn:hover {
-    color: var(--favorite-color);
+  color: var(--favorite-color);
 }
 
 .favorite-btn.favorited {
-    color: var(--favorite-color);
-    animation: star-bounce 0.4s ease;
+  color: var(--favorite-color);
+  animation: star-bounce 0.4s ease;
 }
 
 .tool-card p {
-    color: var(--subtle-text);
-    flex-grow: 1; /* Pushes tags to the bottom */
-    margin-bottom: 1rem;
+  color: var(--subtle-text);
+  flex-grow: 1; /* Pushes tags to the bottom */
+  margin-bottom: 1rem;
 }
 
 .tags-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .tag {
-    background-color: var(--tag-bg);
-    color: var(--tag-text);
-    padding: 0.25rem 0.6rem;
-    border-radius: 100px; /* Pill shape */
-    font-size: 0.8rem;
-    font-weight: 500;
+  background-color: var(--tag-bg);
+  color: var(--tag-text);
+  padding: 0.25rem 0.6rem;
+  border-radius: 100px; /* Pill shape */
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 /* --- Empty State --- */
 .empty-state {
-    text-align: center;
-    padding: 4rem 1rem;
-    background-color: transparent;
-    border-radius: 12px;
-    border: 1px dashed var(--border-color);
-    color: var(--subtle-text);
-    animation: card-fade-in 0.4s ease-out;
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: transparent;
+  border-radius: 12px;
+  border: 1px dashed var(--border-color);
+  color: var(--subtle-text);
+  animation: card-fade-in 0.4s ease-out;
 }
 
 .empty-state h2 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-color);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
 }
 
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
-    .header-container {
-        padding: 2rem 1rem;
-    }
-    .header-container h1 {
-        font-size: 2rem;
-    }
-    .controls-container {
-        /* Pin to bottom on mobile */
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 100;
+  .header-container {
+    padding: 2rem 1rem;
+  }
+  .header-container h1 {
+    font-size: 2rem;
+  }
+  .controls-container {
+    /* Pin to bottom on mobile */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
 
-        /* Styling for the bar */
-        background-color: rgba(28, 28, 30, 0.85); /* --bg-color with transparency */
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border-top: 1px solid var(--border-color);
-        padding: 1rem;
-        margin-bottom: 0; /* Override default margin */
-        flex-direction: column;
-    }
-    .tools-grid {
-        grid-template-columns: 1fr;
-    }
-    .main-container {
-        /* Add space at the bottom to avoid content being hidden by the fixed controls */
-        padding-bottom: 10rem;
-    }
+    /* Styling for the bar */
+    background-color: rgba(28, 28, 30, 0.85); /* --bg-color with transparency */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid var(--border-color);
+    padding: 1rem;
+    margin-bottom: 0; /* Override default margin */
+    flex-direction: column;
+  }
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+  .main-container {
+    /* Add space at the bottom to avoid content being hidden by the fixed controls */
+    padding-bottom: 10rem;
+  }
 }
