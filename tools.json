@@ -1,45 +1,350 @@
 [
-  { "name": "Pixelfox", "description": "AI photo editor: background remove, upscaling & retouch.", "tags": ["Images", "AI", "Editing", "Enhancement", "Background Removal"], "url": "https://pixelfox.ai/" },
-  { "name": "Ailee Free Background Remover", "description": "Instant AI background removal online free.", "tags": ["Images", "AI", "Background Removal", "Quick", "Free"], "url": "https://ailee.ai/tools/free-background-remover" },
-  { "name": "Media.io Background Remover", "description": "AI tool to remove image backgrounds online.", "tags": ["Images", "AI", "Background Removal", "Utility", "Web Tool"], "url": "https://www.media.io/ai/ai-tools/bg-remover" },
-  { "name": "Imagefy", "description": "AI image enhancer, upscale, background & object remove.", "tags": ["Images", "AI", "Enhancement", "Editing", "Background Removal"], "url": "https://imagefy.org/" },
-  { "name": "Pixflux", "description": "Remove watermark, background & enhance photos online.", "tags": ["Images", "AI", "Watermark Removal", "Editing", "Enhancement"], "url": "https://pixflux.ai/en" },
-  { "name": "EnhanceIt.pro", "description": "AI photo enhancer & background remover for free.", "tags": ["Images", "AI", "Enhancement", "Background Removal", "Free Tool"], "url": "https://enhanceit.pro/ai-background-remover" },
-  { "name": "DreamShootAI", "description": "Collection of free AI image/video editing tools online.", "tags": ["Images", "Video", "AI", "Editing", "Free Tools"], "url": "https://dreamshootai.com/tools" },
-  { "name": "TinyPNG", "description": "Compress PNG/JPEG images for web without quality loss.", "tags": ["Images", "Compression", "Optimization", "Utility", "Free"], "url": "https://tinypng.com" },
-  { "name": "Photopea", "description": "Browser‑based Photoshop‑like editor for images.", "tags": ["Images", "Editing", "Design", "Utility", "Free"], "url": "https://www.photopea.com" },
-  { "name": "Bennett Feely Clippy", "description": "Visual CSS clip‑path generator for shapes.", "tags": ["Design", "Frontend", "CSS", "Utility", "Web Tool"], "url": "https://bennettfeely.com/clippy/" },
-  { "name": "CSSGradient.io", "description": "Interactive CSS gradient builder for UI design.", "tags": ["Design", "Frontend", "CSS", "UI/UX", "Utility"], "url": "https://cssgradient.io/" },
-  { "name": "CSSMatic", "description": "Generate CSS shadows, gradients, and styles visually.", "tags": ["Design", "CSS", "Frontend", "UI/UX", "Utility"], "url": "https://www.cssmatic.com/" },
-  { "name": "Best CSS Button Generator", "description": "Create custom CSS button styles online.", "tags": ["Design", "CSS", "UI/UX", "Frontend", "Utility"], "url": "https://www.bestcssbuttongenerator.com/" },
-  { "name": "GetWaves.io", "description": "Generate SVG wave‑shaped backgrounds for web design.", "tags": ["Design", "Graphics", "Frontend", "UI/UX", "Utility"], "url": "https://getwaves.io/" },
-  { "name": "WebDevPuneet Image Tools", "description": "Online image converter, cropper, resizer & more.", "tags": ["Images", "Utility", "Editing", "Conversion", "Free"], "url": "https://tools.webdevpuneet.com/" },
-  { "name": "CoderCrafter Image Tools", "description": "Compress or convert images online easily.", "tags": ["Images", "Utility", "Compression", "Conversion", "Free"], "url": "https://codercrafter.in/tools" },
-  { "name": "JSFiddle", "description": "Online HTML/CSS/JS playground for quick prototypes.", "tags": ["Code", "Frontend", "Developer", "Utility", "Free"], "url": "https://jsfiddle.net" },
-  { "name": "Unsplash", "description": "Free high‑quality stock photos for personal & commercial use.", "tags": ["Images", "Stock", "Photography", "Free Assets", "Creative"], "url": "https://unsplash.com" },
-  { "name": "Pexels", "description": "Free stock photos and videos for creative projects.", "tags": ["Images", "Video", "Stock", "Free Assets", "Creative"], "url": "https://www.pexels.com" },
-  { "name": "Pixabay", "description": "Free images, videos and illustration stock resources.", "tags": ["Images", "Video", "Stock", "Free Assets", "Creative"], "url": "https://pixabay.com" },
-  { "name": "Videvo", "description": "Free stock video clips and motion graphics.", "tags": ["Video", "Stock", "Free Assets", "Creative", "Media"], "url": "https://www.videvo.net" },
-  { "name": "Mixkit", "description": "Free video clips, music and sound‑effects for projects.", "tags": ["Video", "Audio", "Stock", "Free Assets", "Creative"], "url": "https://mixkit.co" },
-  { "name": "Coverr", "description": "Free stock videos for websites and creative use.", "tags": ["Video", "Stock", "Free Assets", "Creative", "Media"], "url": "https://coverr.co" },
-  { "name": "Storyblocks (free section)", "description": "Free stock footage and audio for creative projects.", "tags": ["Video", "Audio", "Stock", "Free Assets", "Media"], "url": "https://www.storyblocks.com/free" },
-  { "name": "Cliptics Text-to-Speech", "description": "Generate voiceovers from text with AI in many languages.", "tags": ["Audio", "AI", "Text-to-Speech", "Voiceover", "Free Tool"], "url": "https://cliptics.com" },
-  { "name": "Kapwing", "description": "Online video editor, subtitle & AI tools for content creation.", "tags": ["Video", "Editing", "AI", "Utility", "Free Tier"], "url": "https://www.kapwing.com" },
-  { "name": "VEED.io", "description": "Simple browser video editor with AI tools.", "tags": ["Video", "Editing", "AI", "Utility", "Free Tier"], "url": "https://www.veed.io" },
-  { "name": "Remove.bg", "description": "Automatically remove backgrounds from photos online.", "tags": ["Images", "AI", "Background Removal", "Utility", "Free Tier"], "url": "https://www.remove.bg" },
-  { "name": "Slazzer", "description": "AI background remover for images (free trial available).", "tags": ["Images", "AI", "Background Removal", "Utility", "Photo Editing"], "url": "https://www.slazzer.com" },
-  { "name": "Runway", "description": "AI video editing & generation tools for creators.", "tags": ["Video", "AI", "Editing", "Creative", "Tool"], "url": "https://runwayml.com/" },
-  { "name": "Unscreen", "description": "Remove video backgrounds without green screen online.", "tags": ["Video", "Background Removal", "Utility", "Editing", "Free Tier"], "url": "https://www.unscreen.com" },
-  { "name": "Kapwing Text-to-Speech", "description": "Convert text into audio for video subtitles or voiceovers.", "tags": ["Audio", "AI", "Text-to-Speech", "Video", "Utility"], "url": "https://www.kapwing.com" },
-  { "name": "Mixkit Music & SFX", "description": "Free music and sound‑effects for video projects.", "tags": ["Audio", "Free Assets", "Stock", "Creative", "Media"], "url": "https://mixkit.co/music" },
-  { "name": "SoundStripe (free section)", "description": "Free audio tracks for videos and creative content.", "tags": ["Audio", "Stock", "Free Assets", "Creative", "Music"], "url": "https://app.soundstripe.com/free" },
-  { "name": "Icons8 Background Remover", "description": "Free remove photo backgrounds quickly online.", "tags": ["Images", "AI", "Background Removal", "Utility", "Free"], "url": "https://icons8.com/background-remover" },
-  { "name": "Photo AI Image Upscaler", "description": "Upscale low‑res images using AI enhancement.", "tags": ["Images", "AI", "Upscale", "Enhancement", "Utility"], "url": "https://photoai.com" },
-  { "name": "Let’s Enhance", "description": "AI image upscaling and enhancement online.", "tags": ["Images", "AI", "Upscale", "Enhancement", "Quality"], "url": "https://letsenhance.io" },
-  { "name": "DeepAI Image Upscaler", "description": "Free AI tool to enlarge image resolution online.", "tags": ["Images", "AI", "Upscale", "Enhancement", "Free Tool"], "url": "https://deepai.org/machine-learning-model/torch-srgan" },
-  { "name": "AI Picture Restorer", "description": "Restore and enhance old or damaged photos online.", "tags": ["Images", "AI", "Restoration", "Enhancement", "Utility"], "url": "https://imglarger.com/restore" },
-  { "name": "Kapwing Subtitles & Auto‑Transcribe", "description": "Auto‑generate subtitles or transcripts for videos.", "tags": ["Video", "AI", "Transcription", "Utility", "Free Tier"], "url": "https://www.kapwing.com/subtitles" },
-  { "name": "Pexels Videos", "description": "Free stock videos for use in projects.", "tags": ["Video", "Stock", "Free Assets", "Creative", "Media"], "url": "https://www.pexels.com/videos" },
-  { "name": "Videezy", "description": "Large collection of free HD stock videos and motion graphics.", "tags": ["Video", "Stock", "Free Assets", "Creative", "Media"], "url": "https://www.videezy.com" },
-  { "name": "Mixamo (Adobe)", "description": "Free character animations and 3D assets for video/design.", "tags": ["3D", "Animation", "Free Assets", "Creative", "Media"], "url": "https://www.mixamo.com" }
+  {
+    "name": "Pixelfox",
+    "description": "AI photo editor: background remove, upscaling & retouch.",
+    "tags": ["Images", "AI", "Editing", "Enhancement", "Background Removal"],
+    "url": "https://pixelfox.ai/"
+  },
+  {
+    "name": "Ailee Free Background Remover",
+    "description": "Instant AI background removal online free.",
+    "tags": ["Images", "AI", "Background Removal", "Quick", "Free"],
+    "url": "https://ailee.ai/tools/free-background-remover"
+  },
+  {
+    "name": "Media.io Background Remover",
+    "description": "AI tool to remove image backgrounds online.",
+    "tags": ["Images", "AI", "Background Removal", "Utility", "Web Tool"],
+    "url": "https://www.media.io/ai/ai-tools/bg-remover"
+  },
+  {
+    "name": "Imagefy",
+    "description": "AI image enhancer, upscale, background & object remove.",
+    "tags": ["Images", "AI", "Enhancement", "Editing", "Background Removal"],
+    "url": "https://imagefy.org/"
+  },
+  {
+    "name": "Pixflux",
+    "description": "Remove watermark, background & enhance photos online.",
+    "tags": ["Images", "AI", "Watermark Removal", "Editing", "Enhancement"],
+    "url": "https://pixflux.ai/en"
+  },
+  {
+    "name": "EnhanceIt.pro",
+    "description": "AI photo enhancer & background remover for free.",
+    "tags": ["Images", "AI", "Enhancement", "Background Removal", "Free Tool"],
+    "url": "https://enhanceit.pro/ai-background-remover"
+  },
+  {
+    "name": "DreamShootAI",
+    "description": "Collection of free AI image/video editing tools online.",
+    "tags": ["Images", "Video", "AI", "Editing", "Free Tools"],
+    "url": "https://dreamshootai.com/tools"
+  },
+  {
+    "name": "TinyPNG",
+    "description": "Compress PNG/JPEG images for web without quality loss.",
+    "tags": ["Images", "Compression", "Optimization", "Utility", "Free"],
+    "url": "https://tinypng.com"
+  },
+  {
+    "name": "Photopea",
+    "description": "Browser‑based Photoshop‑like editor for images.",
+    "tags": ["Images", "Editing", "Design", "Utility", "Free"],
+    "url": "https://www.photopea.com"
+  },
+  {
+    "name": "Bennett Feely Clippy",
+    "description": "Visual CSS clip‑path generator for shapes.",
+    "tags": ["Design", "Frontend", "CSS", "Utility", "Web Tool"],
+    "url": "https://bennettfeely.com/clippy/"
+  },
+  {
+    "name": "CSSGradient.io",
+    "description": "Interactive CSS gradient builder for UI design.",
+    "tags": ["Design", "Frontend", "CSS", "UI/UX", "Utility"],
+    "url": "https://cssgradient.io/"
+  },
+  {
+    "name": "CSSMatic",
+    "description": "Generate CSS shadows, gradients, and styles visually.",
+    "tags": ["Design", "CSS", "Frontend", "UI/UX", "Utility"],
+    "url": "https://www.cssmatic.com/"
+  },
+  {
+    "name": "Best CSS Button Generator",
+    "description": "Create custom CSS button styles online.",
+    "tags": ["Design", "CSS", "UI/UX", "Frontend", "Utility"],
+    "url": "https://www.bestcssbuttongenerator.com/"
+  },
+  {
+    "name": "GetWaves.io",
+    "description": "Generate SVG wave‑shaped backgrounds for web design.",
+    "tags": ["Design", "Graphics", "Frontend", "UI/UX", "Utility"],
+    "url": "https://getwaves.io/"
+  },
+  {
+    "name": "WebDevPuneet Image Tools",
+    "description": "Online image converter, cropper, resizer & more.",
+    "tags": ["Images", "Utility", "Editing", "Conversion", "Free"],
+    "url": "https://tools.webdevpuneet.com/"
+  },
+  {
+    "name": "CoderCrafter Image Tools",
+    "description": "Compress or convert images online easily.",
+    "tags": ["Images", "Utility", "Compression", "Conversion", "Free"],
+    "url": "https://codercrafter.in/tools"
+  },
+  {
+    "name": "JSFiddle",
+    "description": "Online HTML/CSS/JS playground for quick prototypes.",
+    "tags": ["Code", "Frontend", "Developer", "Utility", "Free"],
+    "url": "https://jsfiddle.net"
+  },
+  {
+    "name": "Unsplash",
+    "description": "Free high‑quality stock photos for personal & commercial use.",
+    "tags": ["Images", "Stock", "Photography", "Free Assets", "Creative"],
+    "url": "https://unsplash.com"
+  },
+  {
+    "name": "Pexels",
+    "description": "Free stock photos and videos for creative projects.",
+    "tags": ["Images", "Video", "Stock", "Free Assets", "Creative"],
+    "url": "https://www.pexels.com"
+  },
+  {
+    "name": "Pixabay",
+    "description": "Free images, videos and illustration stock resources.",
+    "tags": ["Images", "Video", "Stock", "Free Assets", "Creative"],
+    "url": "https://pixabay.com"
+  },
+  {
+    "name": "Videvo",
+    "description": "Free stock video clips and motion graphics.",
+    "tags": ["Video", "Stock", "Free Assets", "Creative", "Media"],
+    "url": "https://www.videvo.net"
+  },
+  {
+    "name": "Mixkit",
+    "description": "Free video clips, music and sound‑effects for projects.",
+    "tags": ["Video", "Audio", "Stock", "Free Assets", "Creative"],
+    "url": "https://mixkit.co"
+  },
+  {
+    "name": "Coverr",
+    "description": "Free stock videos for websites and creative use.",
+    "tags": ["Video", "Stock", "Free Assets", "Creative", "Media"],
+    "url": "https://coverr.co"
+  },
+  {
+    "name": "Storyblocks (free section)",
+    "description": "Free stock footage and audio for creative projects.",
+    "tags": ["Video", "Audio", "Stock", "Free Assets", "Media"],
+    "url": "https://www.storyblocks.com/free"
+  },
+  {
+    "name": "Cliptics Text-to-Speech",
+    "description": "Generate voiceovers from text with AI in many languages.",
+    "tags": ["Audio", "AI", "Text-to-Speech", "Voiceover", "Free Tool"],
+    "url": "https://cliptics.com"
+  },
+  {
+    "name": "Kapwing",
+    "description": "Online video editor, subtitle & AI tools for content creation.",
+    "tags": ["Video", "Editing", "AI", "Utility", "Free Tier"],
+    "url": "https://www.kapwing.com"
+  },
+  {
+    "name": "VEED.io",
+    "description": "Simple browser video editor with AI tools.",
+    "tags": ["Video", "Editing", "AI", "Utility", "Free Tier"],
+    "url": "https://www.veed.io"
+  },
+  {
+    "name": "Remove.bg",
+    "description": "Automatically remove backgrounds from photos online.",
+    "tags": ["Images", "AI", "Background Removal", "Utility", "Free Tier"],
+    "url": "https://www.remove.bg"
+  },
+  {
+    "name": "Slazzer",
+    "description": "AI background remover for images (free trial available).",
+    "tags": ["Images", "AI", "Background Removal", "Utility", "Photo Editing"],
+    "url": "https://www.slazzer.com"
+  },
+  {
+    "name": "Runway",
+    "description": "AI video editing & generation tools for creators.",
+    "tags": ["Video", "AI", "Editing", "Creative", "Tool"],
+    "url": "https://runwayml.com/"
+  },
+  {
+    "name": "Unscreen",
+    "description": "Remove video backgrounds without green screen online.",
+    "tags": ["Video", "Background Removal", "Utility", "Editing", "Free Tier"],
+    "url": "https://www.unscreen.com"
+  },
+  {
+    "name": "Kapwing Text-to-Speech",
+    "description": "Convert text into audio for video subtitles or voiceovers.",
+    "tags": ["Audio", "AI", "Text-to-Speech", "Video", "Utility"],
+    "url": "https://www.kapwing.com"
+  },
+  {
+    "name": "Mixkit Music & SFX",
+    "description": "Free music and sound‑effects for video projects.",
+    "tags": ["Audio", "Free Assets", "Stock", "Creative", "Media"],
+    "url": "https://mixkit.co/music"
+  },
+  {
+    "name": "SoundStripe (free section)",
+    "description": "Free audio tracks for videos and creative content.",
+    "tags": ["Audio", "Stock", "Free Assets", "Creative", "Music"],
+    "url": "https://app.soundstripe.com/free"
+  },
+  {
+    "name": "Icons8 Background Remover",
+    "description": "Free remove photo backgrounds quickly online.",
+    "tags": ["Images", "AI", "Background Removal", "Utility", "Free"],
+    "url": "https://icons8.com/background-remover"
+  },
+  {
+    "name": "Photo AI Image Upscaler",
+    "description": "Upscale low‑res images using AI enhancement.",
+    "tags": ["Images", "AI", "Upscale", "Enhancement", "Utility"],
+    "url": "https://photoai.com"
+  },
+  {
+    "name": "Let’s Enhance",
+    "description": "AI image upscaling and enhancement online.",
+    "tags": ["Images", "AI", "Upscale", "Enhancement", "Quality"],
+    "url": "https://letsenhance.io"
+  },
+  {
+    "name": "DeepAI Image Upscaler",
+    "description": "Free AI tool to enlarge image resolution online.",
+    "tags": ["Images", "AI", "Upscale", "Enhancement", "Free Tool"],
+    "url": "https://deepai.org/machine-learning-model/torch-srgan"
+  },
+  {
+    "name": "AI Picture Restorer",
+    "description": "Restore and enhance old or damaged photos online.",
+    "tags": ["Images", "AI", "Restoration", "Enhancement", "Utility"],
+    "url": "https://imglarger.com/restore"
+  },
+  {
+    "name": "Kapwing Subtitles & Auto‑Transcribe",
+    "description": "Auto‑generate subtitles or transcripts for videos.",
+    "tags": ["Video", "AI", "Transcription", "Utility", "Free Tier"],
+    "url": "https://www.kapwing.com/subtitles"
+  },
+  {
+    "name": "Pexels Videos",
+    "description": "Free stock videos for use in projects.",
+    "tags": ["Video", "Stock", "Free Assets", "Creative", "Media"],
+    "url": "https://www.pexels.com/videos"
+  },
+  {
+    "name": "Videezy",
+    "description": "Large collection of free HD stock videos and motion graphics.",
+    "tags": ["Video", "Stock", "Free Assets", "Creative", "Media"],
+    "url": "https://www.videezy.com"
+  },
+  {
+    "name": "Mixamo (Adobe)",
+    "description": "Free character animations and 3D assets for video/design.",
+    "tags": ["3D", "Animation", "Free Assets", "Creative", "Media"],
+    "url": "https://www.mixamo.com"
+  },
+  {
+    "name": "Pixabay",
+    "description": "Free stock photos, videos, illustrations, vectors, and music for personal and commercial use.",
+    "tags": [
+      "Stock Images",
+      "Videos",
+      "Free Assets",
+      "Creative",
+      "Photography"
+    ],
+    "url": "https://pixabay.com"
+  },
+  {
+    "name": "Pexels",
+    "description": "Large library of free high-quality stock photos and videos contributed by creators worldwide.",
+    "tags": [
+      "Stock Images",
+      "Videos",
+      "Free Assets",
+      "Photography",
+      "Creative"
+    ],
+    "url": "https://pexels.com"
+  },
+  {
+    "name": "Milanote",
+    "description": "Visual workspace for designers to organize projects, moodboards, ideas, and creative workflows.",
+    "tags": [
+      "Design",
+      "Productivity",
+      "Brainstorming",
+      "Moodboards",
+      "Organization"
+    ],
+    "url": "https://milanote.com"
+  },
+  {
+    "name": "Screen-Recorder.com",
+    "description": "Simple online screen recorder for capturing your desktop, browser, or webcam without installing software.",
+    "tags": [
+      "Screen Recording",
+      "Video",
+      "Productivity",
+      "Utility",
+      "Web Tool"
+    ],
+    "url": "https://screen-recorder.com"
+  },
+  {
+    "name": "Mentimeter",
+    "description": "Interactive presentation and polling tool for real-time engagement with live audiences.",
+    "tags": [
+      "Presentations",
+      "Engagement",
+      "Polling",
+      "Productivity",
+      "Web Tool"
+    ],
+    "url": "https://mentimeter.com"
+  },
+  {
+    "name": "Pixieset",
+    "description": "Portfolio, client galleries, and photo delivery platform for photographers and creative professionals.",
+    "tags": [
+      "Photography",
+      "Client Delivery",
+      "Portfolios",
+      "Creative",
+      "Business"
+    ],
+    "url": "https://pixieset.com"
+  },
+  {
+    "name": "Pixlr Batch",
+    "description": "A fast online batch photo editor for resizing, converting, compressing, and applying edits to multiple images at once.",
+    "tags": [
+      "Image Editing",
+      "Batch Processing",
+      "Conversion",
+      "Utility",
+      "Web Tool"
+    ],
+    "url": "https://pixlr.com/batch/"
+  },
+  {
+    "name": "Watermark Remover",
+    "description": "Instantly remove watermarks from images using AI.",
+    "tags": ["AI", "Image Editing", "Cleanup", "Productivity", "Utility"],
+    "url": "https://watermarkremover.io"
+  }
 ]
