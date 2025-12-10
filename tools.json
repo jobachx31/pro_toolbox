@@ -346,5 +346,17 @@
     "description": "Instantly remove watermarks from images using AI.",
     "tags": ["AI", "Image Editing", "Cleanup", "Productivity", "Utility"],
     "url": "https://watermarkremover.io"
+  },
+  {
+    "name": "Draw.io",
+    "description": "Free online diagramming tool for creating flowcharts, org charts, UML diagrams, and more.",
+    "tags": [
+      "Diagrams",
+      "Flowcharts",
+      "UML",
+      "Productivity",
+      "Web Tool"
+    ],
+    "url": "https://draw.io" 
   }
 ]
