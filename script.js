@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- STATE ---
   let favorites = JSON.parse(localStorage.getItem("toolboxFavorites")) || [];
   let isFavoritesView = false;
-  let tools = []; // Placeholder for tools
   let isInitialLoad = true; // Flag to handle initial animation
 
   // --- FUNCTIONS ---
@@ -20,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
    * @param {Array} toolsToRender - The array of tool objects to display.
    */
   const renderTools = (toolsToRender) => {
-    // Clear the grid before rendering new cards
+    // Clear the grid and hide empty state
     toolsGrid.innerHTML = "";
     emptyState.style.display = "none";
 
@@ -35,16 +34,16 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Create and append a card for each tool
+    // Create a card for each tool
     toolsToRender.forEach((tool, index) => {
       const isFavorited = favorites.includes(tool.name);
 
+      // Create the card link
       const card = document.createElement("a");
       card.href = tool.url;
       card.target = "_blank";
       card.rel = "noopener noreferrer";
       card.className = "tool-card";
-
       // Apply cascading animation class and delay only on the initial page load
       if (isInitialLoad) {
         card.classList.add("initial-load-animation");
@@ -77,10 +76,11 @@ document.addEventListener("DOMContentLoaded", () => {
         toggleFavorite(tool.name, favButton);
       });
 
+      // Append the card to the grid
       toolsGrid.appendChild(card);
     });
 
-    // The initial load is complete, so set the flag to false
+    // The initial load is complete, so disable the flag
     isInitialLoad = false;
   };
 
@@ -96,9 +96,14 @@ document.addEventListener("DOMContentLoaded", () => {
       favorites.splice(index, 1);
       buttonElement.classList.remove("favorited");
     } else {
+      const isSearching = searchBar.value.trim() !== "";
       // Add to favorites
       favorites.push(toolName);
       buttonElement.classList.add("favorited");
+      // If searching, prevent the "spammy" animation by temporarily disabling it
+      if (isSearching) {
+        buttonElement.style.animation = "none";
+      }
     }
     // Save updated favorites to localStorage
     localStorage.setItem("toolboxFavorites", JSON.stringify(favorites));
@@ -107,13 +112,29 @@ document.addEventListener("DOMContentLoaded", () => {
     filterAndRender();
   };
 
+  const animateOnScroll = () => {
+    const cards = document.querySelectorAll(".tool-card");
+
+    cards.forEach((card, index) => {
+      const cardTop = card.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (cardTop < windowHeight * 0.75) {
+        card.classList.add("card-fade-in");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", () => {
+    if (!searchBar.value) animateOnScroll();
+  });
+
   /**
    * Filters tools based on search term and favorites view, then renders them.
    */
   const filterAndRender = () => {
     const searchTerm = searchBar.value.toLowerCase();
     let filteredTools = tools;
-
     // 1. Filter by "Show Favorites" toggle
     if (isFavoritesView) {
       filteredTools = filteredTools.filter((tool) =>
@@ -220,7 +241,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("tools.json")
     .then((response) => response.json())
     .then((data) => {
-      tools = data;
+      window.tools = data;
       // Use filterAndRender for the initial render to apply sorting
       filterAndRender();
     })
