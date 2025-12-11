@@ -175,6 +175,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- EVENT LISTENERS ---
 
+  // Handle logo click for a clean page refresh
+  const headerLink = document.querySelector(".header-link");
+  if (headerLink) {
+    headerLink.addEventListener("click", (e) => {
+      // Prevent the default link navigation
+      e.preventDefault();
+      // Reload the page from the server, bypassing the cache for the main document
+      window.location.href = window.location.origin + window.location.pathname;
+    });
+  }
   // Handle "Enter" key press on the search bar
   searchBar.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {

@@ -352,5 +352,11 @@
     "description": "Free online diagramming tool for creating flowcharts, org charts, UML diagrams, and more.",
     "tags": ["Diagrams", "Flowcharts", "UML", "Productivity", "Web Tool"],
     "url": "https://draw.io"
+  },
+  {
+    "name": "Speech Notes",
+    "description": "Voice recognition notepad for dictating notes and transcribing speech to text.",
+    "tags": ["Voice Recognition", "Productivity", "Transcription", "Notes", "Web Tool", "Free"],
+    "url": "https://speechnotes.co"
   }
 ]
