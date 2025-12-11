@@ -108,12 +108,6 @@
     "url": "https://unsplash.com"
   },
   {
-    "name": "Pexels",
-    "description": "Free stock photos and videos for creative projects.",
-    "tags": ["Images", "Video", "Stock", "Free Assets", "Creative"],
-    "url": "https://www.pexels.com"
-  },
-  {
     "name": "Pixabay",
     "description": "Free images, videos and illustration stock resources.",
     "tags": ["Images", "Video", "Stock", "Free Assets", "Creative"],
@@ -356,7 +350,14 @@
   {
     "name": "Speech Notes",
     "description": "Voice recognition notepad for dictating notes and transcribing speech to text.",
-    "tags": ["Voice Recognition", "Productivity", "Transcription", "Notes", "Web Tool", "Free"],
+    "tags": [
+      "Voice Recognition",
+      "Productivity",
+      "Transcription",
+      "Notes",
+      "Web Tool",
+      "Free"
+    ],
     "url": "https://speechnotes.co"
   }
 ]
