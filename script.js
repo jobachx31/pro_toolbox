@@ -181,8 +181,23 @@ document.addEventListener("DOMContentLoaded", () => {
     headerLink.addEventListener("click", (e) => {
       // Prevent the default link navigation
       e.preventDefault();
-      // Reload the page from the server, bypassing the cache for the main document
-      window.location.href = window.location.origin + window.location.pathname;
+
+      // 1. Check if "Show Favorites" is on, and disable it if it is
+      if (isFavoritesView) {
+        isFavoritesView = false;
+        favoritesToggle.classList.remove("active");
+        favoritesToggle.querySelector("i").className = "fa-regular fa-star";
+        favoritesToggle.childNodes[2].nodeValue = " Show Favorites";
+      }
+
+      // 2. Clear the search bar
+      searchBar.value = "";
+
+      // 3. Reset the animation flag to replay the card fading animation
+      isInitialLoad = true;
+
+      // Re-render the tools with the reset state
+      filterAndRender();
     });
   }
   // Handle "Enter" key press on the search bar

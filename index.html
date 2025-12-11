@@ -38,9 +38,6 @@
         <button id="favorites-toggle">
           <i class="fa-regular fa-star"></i> Show Favorites
         </button>
-        <button id="open-suggest-modal-btn" title="Suggest a Tool">
-          <i class="fa-regular fa-lightbulb"></i>
-        </button>
       </div>
 
       <div id="tools-grid" class="tools-grid">
@@ -48,33 +45,6 @@
       </div>
       <div id="empty-state" class="empty-state" style="display: none"></div>
     </main>
-
-    <!-- Suggestion Modal -->
-    <div id="suggestion-modal" class="modal">
-      <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <div class="suggestion-container">
-          <h2>Suggest a New Tool</h2>
-          <p>
-            Found a cool tool? Let us know! We'll review it and add it to the
-            list.
-          </p>
-          <form id="suggestion-form">
-            <input
-              type="url"
-              id="tool-url-input"
-              name="url"
-              placeholder="https://example-tool.com"
-              required
-            />
-            <button type="submit" id="submit-suggestion-btn">
-              Suggest Tool
-            </button>
-          </form>
-          <div id="suggestion-message" aria-live="polite"></div>
-        </div>
-      </div>
-    </div>
 
     <style>
       /* --- Controls Container Alignment Fix --- */
@@ -98,173 +68,8 @@
           flex-basis: 100%; /* Make search bar take the full width, forcing a wrap */
         }
       }
-
-      /* Suggestion Button Style */
-      #open-suggest-modal-btn {
-        background-color: #f0f0f0; /* Light grey background */
-        color: #333; /* Dark text */
-        border: 1px solid #ddd;
-        border-radius: 50%; /* Make it a circle */
-        width: 36px; /* Set a fixed width */
-        height: 36px; /* Set a fixed height */
-        padding: 0; /* Remove padding to center icon */
-        cursor: pointer;
-        font-family: "Work Sans", sans-serif;
-        font-weight: 500;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background-color 0.2s ease;
-        font-size: 14px;
-      }
-      #open-suggest-modal-btn:hover {
-        background-color: #e0e0e0; /* Darker grey on hover */
-      }
-
-      /* --- Dark Apple Theme Modal Styles --- */
-      .modal {
-        display: none; /* Hidden by default */
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0, 0, 0, 0.7); /* Darker overlay */
-        -webkit-backdrop-filter: blur(4px);
-        backdrop-filter: blur(4px);
-        transition: opacity 0.3s ease;
-      }
-      .modal-content {
-        background-color: #1d1d1f; /* Dark grey background */
-        color: #f5f5f7; /* Light text */
-        margin: 10% auto;
-        padding: 2rem;
-        border-radius: 16px; /* Larger radius for a softer look */
-        width: 90%;
-        max-width: 500px;
-        position: relative;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        border: 1px solid #3a3a3c;
-      }
-      .close-button {
-        color: #888; /* Lighter grey for visibility */
-        position: absolute;
-        top: 10px;
-        right: 20px;
-        font-size: 28px;
-        font-weight: bold;
-        cursor: pointer;
-      }
-      .close-button:hover,
-      .close-button:focus {
-        color: #fff;
-      }
-
-      /* Form styles from previous suggestion */
-      #suggestion-form {
-        display: flex;
-        gap: 10px;
-        margin-top: 1rem;
-      }
-      #tool-url-input {
-        flex-grow: 1;
-        padding: 10px;
-        border: 1px solid #4a4a4c;
-        border-radius: 4px;
-        background-color: #3a3a3c;
-        color: #f5f5f7;
-      }
-      #tool-url-input::placeholder {
-        color: #8e8e93;
-      }
-      #submit-suggestion-btn {
-        padding: 10px 15px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        background-color: rgba(255, 255, 255, 0.1); /* Glassmorphic grey */
-        color: #f5f5f7; /* Light text */
-        border-radius: 6px;
-        cursor: pointer;
-        transition: background-color 0.2s ease;
-        font-weight: 500;
-        font-family: "Work Sans", sans-serif;
-      }
-      #submit-suggestion-btn:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-      }
-      #suggestion-message {
-        margin-top: 1rem;
-        font-weight: bold;
-      }
-      .success {
-        color: #28a745;
-      }
-      .error {
-        color: #dc3545;
-      }
     </style>
 
     <script src="script.js"></script>
-    <script>
-      // --- Modal Control Script ---
-      const modal = document.getElementById("suggestion-modal");
-      const openBtn = document.getElementById("open-suggest-modal-btn");
-      const closeBtn = document.querySelector(".close-button");
-
-      openBtn.onclick = () => (modal.style.display = "block");
-      closeBtn.onclick = () => (modal.style.display = "none");
-      window.onclick = (event) => {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      };
-
-      // --- Form Submission Script (from previous suggestion) ---
-      const form = document.getElementById("suggestion-form");
-      const urlInput = document.getElementById("tool-url-input");
-      const messageDiv = document.getElementById("suggestion-message");
-      const submitButton = document.getElementById("submit-suggestion-btn");
-
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        const url = urlInput.value.trim();
-
-        if (!url) {
-          messageDiv.textContent = "Please enter a URL.";
-          messageDiv.className = "error";
-          return;
-        }
-
-        submitButton.disabled = true;
-        submitButton.textContent = "Submitting...";
-        messageDiv.textContent = "";
-
-        try {
-          // The endpoint for your serverless function
-          const response = await fetch("/api/suggest", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ url }),
-          });
-
-          const result = await response.json();
-
-          if (!response.ok) {
-            throw new Error(result.message || "An unknown error occurred.");
-          }
-
-          messageDiv.textContent = result.message;
-          messageDiv.className = "success";
-          form.reset();
-        } catch (error) {
-          messageDiv.textContent = error.message;
-          messageDiv.className = "error";
-        } finally {
-          submitButton.disabled = false;
-          submitButton.textContent = "Suggest Tool";
-        }
-      });
-    </script>
   </body>
 </html>
