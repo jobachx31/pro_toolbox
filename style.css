@@ -99,6 +99,11 @@ body {
   max-width: 500px;
   margin: 0 auto;
 }
+.header-link {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* Make the link fill the header padding */
+}
 
 /* --- Main Content & Controls --- */
 .main-container {
