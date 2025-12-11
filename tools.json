@@ -363,13 +363,7 @@
   {
     "name": "iLovePDF",
     "description": "Comprehensive online PDF editor and converter with tools for merging, splitting, compressing, and converting PDFs.",
-    "tags": [
-      "PDF",
-      "Editing",
-      "Conversion",
-      "Productivity",
-      "Web Tool"
-    ],
+    "tags": ["PDF", "Editing", "Conversion", "Productivity", "Web Tool"],
     "url": "https://ilovepdf.com"
   }
 ]

@@ -318,21 +318,40 @@ body {
     font-size: 2rem;
   }
   .controls-container {
-    /* Pin to bottom on mobile */
+    /* Make it a floating pill at the bottom */
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 1rem; /* Add margin from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 100;
+    width: 95%; /* Don't let it touch the screen edges */
+    max-width: 500px; /* Set a max-width for larger "mobile" screens */
 
-    /* Styling for the bar */
-    background-color: rgba(28, 28, 30, 0.85); /* --bg-color with transparency */
+    /* Glass effect styling */
+    background-color: rgba(
+      44,
+      44,
+      46,
+      0.75
+    ); /* --card-bg with more transparency */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-top: 1px solid var(--border-color);
-    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 100px; /* Pill shape */
+    padding: 0.5rem; /* Reduced padding for a tighter look */
     margin-bottom: 0; /* Override default margin */
-    flex-direction: column;
+
+    /* Align items inside */
+    display: flex;
+    flex-direction: row; /* Items side-by-side */
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  #search-bar {
+    /* Remove individual styling to blend into the container */
+    background: none;
+    border: none;
   }
   .tools-grid {
     grid-template-columns: 1fr;
