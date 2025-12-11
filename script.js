@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchBar = document.getElementById("search-bar");
   const favoritesToggle = document.getElementById("favorites-toggle");
   const emptyState = document.getElementById("empty-state");
+  const favoritesToggleButtonText =
+    favoritesToggle.querySelector(".button-text");
 
   // --- STATE ---
   let favorites = JSON.parse(localStorage.getItem("toolboxFavorites")) || [];
@@ -250,13 +252,12 @@ document.addEventListener("DOMContentLoaded", () => {
     favoritesToggle.classList.toggle("active", isFavoritesView);
 
     // Update button text/icon based on state
-    const buttonText = favoritesToggle.childNodes[2]; // Get the text node
     if (isFavoritesView) {
       favoritesToggle.querySelector("i").className = "fa-solid fa-star";
-      buttonText.nodeValue = " Show All";
+      favoritesToggleButtonText.textContent = " Show All";
     } else {
       favoritesToggle.querySelector("i").className = "fa-regular fa-star";
-      buttonText.nodeValue = " Show Favorites";
+      favoritesToggleButtonText.textContent = " Show Favorites";
     }
 
     filterAndRender();

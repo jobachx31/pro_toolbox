@@ -132,6 +132,7 @@ body {
 #search-bar {
   flex-grow: 1;
   background-color: var(--bg-color); /* Darker background for input */
+  min-width: 150px; /* Prevents the search bar from becoming too small */
   color: var(--text-color); /* Explicitly set text color for good contrast */
   border-radius: 100px; /* Pill shape */
 }
@@ -327,31 +328,49 @@ body {
     width: 95%; /* Don't let it touch the screen edges */
     max-width: 500px; /* Set a max-width for larger "mobile" screens */
 
-    /* Glass effect styling */
-    background-color: rgba(
-      44,
-      44,
-      46,
-      0.75
-    ); /* --card-bg with more transparency */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--border-color);
-    border-radius: 100px; /* Pill shape */
-    padding: 0.5rem; /* Reduced padding for a tighter look */
+    /* Remove the container's own styling to make it just a positioning wrapper */
+    background-color: transparent;
+    backdrop-filter: none;
+    border: none;
     margin-bottom: 0; /* Override default margin */
 
-    /* Align items inside */
-    display: flex;
-    flex-direction: row; /* Items side-by-side */
+    /* Use grid for specific column distribution */
+    display: grid;
+    grid-template-columns: 1fr auto; /* Let search take space, button is size of content */
     align-items: center;
     gap: 0.5rem;
   }
 
   #search-bar {
-    /* Remove individual styling to blend into the container */
-    background: none;
-    border: none;
+    /* Re-apply glass effect styling to the search bar itself */
+    height: 44px; /* Match the button's height for alignment */
+    background-color: rgba(44, 44, 46, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: 100px; /* Pill shape */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 0.9rem; /* Slightly smaller font */
+  }
+
+  #favorites-toggle {
+    /* Re-apply glass effect styling to the button */
+    background-color: rgba(44, 44, 46, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: 50%; /* Make it a circle */
+    width: 44px; /* Set fixed size for a circle */
+    height: 44px;
+    padding: 0; /* Remove padding to center the icon */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center icon horizontally */
+    font-size: 0.9rem; /* Match font size */
+    white-space: nowrap; /* Prevent text from wrapping if it were visible */
+  }
+  #favorites-toggle .button-text {
+    display: none; /* Hide the text on mobile */
   }
   .tools-grid {
     grid-template-columns: 1fr;

@@ -36,7 +36,8 @@
           placeholder="Search by name or tag (e.g., AI, Video)..."
         />
         <button id="favorites-toggle">
-          <i class="fa-regular fa-star"></i> Show Favorites
+          <i class="fa-regular fa-star"></i>
+          <span class="button-text">Show Favorites</span>
         </button>
       </div>
 
@@ -45,30 +46,6 @@
       </div>
       <div id="empty-state" class="empty-state" style="display: none"></div>
     </main>
-
-    <style>
-      /* --- Controls Container Alignment Fix --- */
-      .controls-container {
-        display: flex;
-        align-items: center; /* Vertically aligns all items in the middle */
-        gap: 10px; /* Adds a consistent space between all items */
-        flex-wrap: wrap; /* Allows items to wrap on very small screens */
-      }
-      #search-bar {
-        flex-grow: 1; /* Allows the search bar to take up remaining space */
-        min-width: 150px; /* Prevents the search bar from becoming too small */
-      }
-
-      /* --- Responsive Layout for Mobile --- */
-      @media (max-width: 500px) {
-        .controls-container {
-          justify-content: flex-end; /* Align buttons to the right */
-        }
-        #search-bar {
-          flex-basis: 100%; /* Make search bar take the full width, forcing a wrap */
-        }
-      }
-    </style>
 
     <script src="script.js"></script>
   </body>
