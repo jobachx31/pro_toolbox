@@ -279,7 +279,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- INITIAL RENDER ---
   // Initial render of all tools on page load
-  searchBar.focus(); // Pre-focus the search bar on page load
+  // Pre-focus the search bar on page load, but only on desktop devices
+  if (window.innerWidth > 768) {
+    searchBar.focus();
+  }
 
   // --- SERVICE WORKER REGISTRATION ---
   if ("serviceWorker" in navigator) {
