@@ -365,5 +365,17 @@
     "description": "Comprehensive online PDF editor and converter with tools for merging, splitting, compressing, and converting PDFs.",
     "tags": ["PDF", "Editing", "Conversion", "Productivity", "Web Tool"],
     "url": "https://ilovepdf.com"
+  },
+  {
+    "name": "Natural Readers",
+    "description": "Text-to-speech online tool that converts written text into spoken words with natural-sounding voices.",
+    "tags": [
+      "Text-to-Speech",
+      "Audio",
+      "Productivity",
+      "Accessibility",
+      "Web Tool"
+    ],
+    "url": "https://www.naturalreaders.com/online/"
   }
 ]
