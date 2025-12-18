@@ -377,5 +377,17 @@
       "Web Tool"
     ],
     "url": "https://www.naturalreaders.com/online/"
+  },
+  {
+    "name": "excalidraw",
+    "description": "Virtual whiteboard for sketching diagrams, wireframes, and collaborative drawings.",
+    "tags": [
+      "Whiteboard",
+      "Collaboration",
+      "Diagrams",
+      "Productivity",
+      "Web Tool"
+    ],
+    "url": "https://excalidraw.com"
   }
 ]
